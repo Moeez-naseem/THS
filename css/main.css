@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --main-bg-color: white;
+  --main-font-color: #282828;
+  --sec-bg-color: black;
+  --sec-font-color: white;
+}
+
+.left {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  width: 9.2rem;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.left .aside-logo a img {
+  width: 4rem;
+}
+.left ul {
+  display: flex;
+  transform: rotate(-90deg);
+}
+.left ul li {
+  list-style: none;
+  padding: 0 1rem;
+}
+.left ul li a {
+  position: relative;
+  font-size: 0.8rem;
+  color: var(--main-font-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.left ul li ::after {
+  content: "";
+  height: 1px;
+  background-color: #282828;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: all 0.2s ease-in-out;
+}
+.left ul li :hover::after {
+  transform: scaleX(1);
+}
+.left .top-btn i {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.right {
+  padding-left: 10rem;
+  padding-right: 1.6rem;
+}
+.right .navbar {
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right .navbar .nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .navbar .nav-logo a img {
+  width: 5.5rem;
+}
+.right .navbar .nav-logo p {
+  padding-left: 4.5rem;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.right .navbar ul {
+  display: flex;
+  align-items: center;
+}
+.right .navbar ul li {
+  padding-right: 2.5rem;
+  list-style: none;
+}
+.right .navbar ul li a {
+  position: relative;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--main-font-color);
+  font-weight: 600;
+}
+.right .navbar ul li ::after {
+  content: "";
+  height: 1px;
+  background-color: #282828;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: all 0.2s ease-in-out;
+}
+.right .navbar ul li :hover::after {
+  transform: scaleX(1);
+}
+.right .navbar ul .hamburgar {
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.right .navbar ul .hamburgar span {
+  transition: all 0.1s ease-in-out;
+  display: block;
+  margin: 0.12rem;
+  width: 23px;
+  height: 2px;
+  background-color: var(--sec-bg-color);
+}
+.right .navbar ul .hamburgar:hover :nth-child(2) {
+  margin-top: 0.25rem;
+  width: 14px;
+  margin-bottom: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+.right .home {
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 80rem;
+}
+.right .home h1 {
+  padding: 0 2rem;
+  max-width: 50rem;
+  color: var(--main-font-color);
+  font-size: 8vw;
+}
+.right .home p {
+  color: var(--main-font-color);
+  max-width: 50rem;
+  padding: 0 2rem;
+  font-size: 1.4rem;
+}
+.right .section-2 {
+  padding-top: 6rem;
+}
+.right .section-2 video {
+  width: 88vw;
+}
+.right .section-3 {
+  display: flex;
+  max-width: 76rem;
+  padding-top: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.right .section-3 h2 {
+  color: var(--main-font-color);
+  font-size: 4.5rem;
+  padding: 2rem 1.45rem;
+}
+.right .section-3 h4 {
+  color: var(--main-font-color);
+  padding: 0 4rem 2rem 1.45rem;
+  line-height: 35px;
+}
+.right .section-3 .section-3-3par {
+  display: flex;
+  justify-content: space-between;
+}
+.right .section-3 .section-3-3par p {
+  color: var(--main-font-color);
+  padding: 0 1.45rem;
+  line-height: 35px;
+}
+
+@media (max-width: 1199px) {
+  .left {
+    transition: all 0.2s ease-in-out;
+    display: none;
+  }
+  .right {
+    padding: 0;
+  }
+  .right .navbar {
+    padding: 2rem 1.8rem;
+  }
+  .right .navbar ul .hamburgar {
+    width: 3rem;
+    height: 3rem;
+    margin: 0rem;
+    margin-left: 2rem;
+  }
+  .right .section-2 video {
+    width: 100vw;
+  }
+}
+@media (max-width: 990px) {
+  .right .navbar ul li {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .right .navbar {
+    padding: 1rem;
+  }
+  .right .navbar .nav-logo p {
+    display: none;
+  }
+  .right .home h1 {
+    font-size: 3.5rem;
+  }
+  .right .home p {
+    font-size: 1rem;
+  }
+  .right .section-3 h2 {
+    font-size: 3rem;
+  }
+  .right .section-3 h4 {
+    padding: 0 1.45rem 2rem 1.45rem;
+  }
+  .right .section-3 .section-3-3par {
+    flex-direction: column;
+  }
+  .right .section-3 .section-3-3par p {
+    padding: 0.5rem 1.45rem;
+  }
+}/*# sourceMappingURL=main.css.map */
